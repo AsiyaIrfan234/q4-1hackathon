@@ -1,0 +1,61 @@
+# API Contract: Documentation Platform Services
+
+## Search API
+
+### GET /api/search
+**Description**: Search across all documentation content
+**Parameters**:
+- query: string (required) - Search query text
+- limit: number (optional) - Maximum results to return (default: 10)
+
+**Response**:
+```
+{
+  "results": [
+    {
+      "id": "string",
+      "title": "string",
+      "content_preview": "string",
+      "url": "string",
+      "module": "string",
+      "chapter": "string",
+      "relevance_score": "number"
+    }
+  ],
+  "total": "number"
+}
+```
+
+### GET /api/modules
+**Description**: Get list of all available modules
+**Response**:
+```
+{
+  "modules": [
+    {
+      "id": "string",
+      "title": "string",
+      "description": "string",
+      "chapter_count": "number",
+      "order": "number"
+    }
+  ]
+}
+```
+
+### GET /api/modules/{moduleId}/chapters
+**Description**: Get list of chapters in a specific module
+**Response**:
+```
+{
+  "chapters": [
+    {
+      "id": "string",
+      "title": "string",
+      "description": "string",
+      "module_id": "string",
+      "order": "number"
+    }
+  ]
+}
+```

@@ -1,0 +1,50 @@
+# CSS Contract: Navbar Visibility Styling
+
+## Overview
+This contract defines the styling requirements for navbar elements to ensure visibility against a black background.
+
+## Target Elements
+
+### Navbar Links
+- **Selector**: `.navbar__link`
+- **Default Color**: `#0072CE` (Accessible Blue)
+- **Hover Color**: `#42A5F5` (Brighter Blue)
+- **Contrast Ratio**: Minimum 4.5:1 against black background
+
+### Navbar Toggle (Color Mode)
+- **Selector**: `.navbar__toggle`
+- **Default Color**: `#0072CE` (Accessible Blue)
+- **Hover Color**: `#42A5F5` (Brighter Blue)
+- **Contrast Ratio**: Minimum 4.5:1 against black background
+
+### Navbar Items
+- **Selector**: `.navbar__item`
+- **Default Color**: `#0072CE` (Accessible Blue)
+- **Hover Color**: `#42A5F5` (Brighter Blue)
+- **Contrast Ratio**: Minimum 4.5:1 against black background
+
+## Implementation Requirements
+
+### Visual Requirements
+1. Text and icons must be clearly visible against black navbar background
+2. Hover states must provide visual feedback with slightly brighter color
+3. Styling must work in both light and dark modes
+4. No layout or functional changes to existing elements
+
+### Technical Requirements
+1. Use `!important` to override default Docusaurus styles
+2. Target only navbar-related CSS classes
+3. Preserve all existing functionality
+4. Maintain responsive design properties
+
+## Validation Criteria
+
+### Accessibility
+- [ ] All text elements have contrast ratio ≥ 4.5:1
+- [ ] Hover states are distinguishable
+- [ ] No color-only identification of interactive elements
+
+### Compatibility
+- [ ] Works across all supported browsers
+- [ ] Maintains functionality in light/dark modes
+- [ ] Preserves existing navbar behavior

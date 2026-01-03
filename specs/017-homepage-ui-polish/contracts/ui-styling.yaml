@@ -1,0 +1,59 @@
+# CSS Contract: Homepage UI Styling
+
+## Overview
+This contract defines the styling requirements for homepage UI elements to ensure readability, contrast, and polished aesthetics while preserving all content.
+
+## Target Elements
+
+### Navbar Styling
+- **Selector**: `.navbar`
+- **Background Color**: `#000000` (Black)
+- **Text Color**: `#3498DB` (Blue)
+- **Hover Color**: `#2980B9` (Darker Blue)
+- **Contrast Ratio**: Minimum 4.5:1 against background
+
+### Hero Section Styling
+- **Selector**: `.hero`
+- **Background**: `linear-gradient(135deg, #3498DB, #1a73e8)`
+- **Title Color**: White with bold weight
+- **Subtitle Color**: White with 0.8 opacity
+- **Logo Alignment**: Centered
+
+### Feature Section Styling
+- **Selector**: `.feature__title`, `.feature__heading`
+- **Heading Color**: `#2c3e50` (Dark Gray)
+- **Heading Weight**: Bold
+- **Paragraph Color**: `#555555` (Medium-Dark Neutral)
+- **Paragraph Line Height**: 1.7
+
+### Button Styling
+- **Selector**: `.button`
+- **Border Radius**: 8px
+- **Hover Effect**: translateY(-2px) and shadow
+- **Transition**: 0.3s ease
+
+## Implementation Requirements
+
+### Visual Requirements
+1. Text and icons must be clearly visible against their backgrounds
+2. Hover states must provide visual feedback with subtle effects
+3. Styling must work in both light and dark modes
+4. No layout or functional changes to existing elements
+
+### Technical Requirements
+1. Use `!important` to override default Docusaurus styles where needed
+2. Target only homepage-related CSS classes
+3. Preserve all existing functionality
+4. Maintain responsive design properties
+
+## Validation Criteria
+
+### Accessibility
+- [ ] All text elements have contrast ratio ≥ 4.5:1
+- [ ] Hover states are distinguishable
+- [ ] No color-only identification of interactive elements
+
+### Compatibility
+- [ ] Works across all supported browsers
+- [ ] Maintains functionality in light/dark modes
+- [ ] Preserves existing page structure

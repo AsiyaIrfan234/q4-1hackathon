@@ -1,0 +1,8 @@
+{
+  "label": "Module 4: Vision-Language-Action (VLA)",
+  "position": 4,
+  "link": {
+    "type": "generated-index",
+    "description": "Explore Vision-Language-Action systems for robotics, covering LLM integration, voice-to-action processing, and autonomous humanoid behavior."
+  }
+}

@@ -1,0 +1,93 @@
+/**
+ * CSS files with the .module.css suffix will be treated as CSS modules
+ * and scoped locally.
+ */
+
+.banner {
+  padding: var(--ifm-spacing-scale-5) 0;
+  margin: 0 0 var(--ifm-spacing-scale-5) 0;
+  border-radius: var(--ifm-global-radius);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.banner--info {
+  background-color: var(--ifm-color-info-100);
+  border-left: 4px solid var(--ifm-color-info);
+}
+
+.banner--success {
+  background-color: var(--ifm-color-success-100);
+  border-left: 4px solid var(--ifm-color-success);
+}
+
+.banner--warning {
+  background-color: var(--ifm-color-warning-100);
+  border-left: 4px solid var(--ifm-color-warning);
+}
+
+.banner--danger {
+  background-color: var(--ifm-color-danger-100);
+  border-left: 4px solid var(--ifm-color-danger);
+}
+
+[data-theme='dark'] .banner--info {
+  background-color: var(--ifm-color-info-800);
+}
+
+[data-theme='dark'] .banner--success {
+  background-color: var(--ifm-color-success-800);
+}
+
+[data-theme='dark'] .banner--warning {
+  background-color: var(--ifm-color-warning-800);
+}
+
+[data-theme='dark'] .banner--danger {
+  background-color: var(--ifm-color-danger-800);
+}
+
+.bannerContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--ifm-spacing-scale-4);
+}
+
+.bannerText {
+  flex: 1;
+}
+
+.bannerTitle {
+  margin-bottom: var(--ifm-spacing-scale-2);
+  font-size: var(--ifm-h3-font-size);
+  font-weight: 600;
+  color: var(--ifm-color-emphasis-900);
+}
+
+[data-theme='dark'] .bannerTitle {
+  color: var(--ifm-color-emphasis-100);
+}
+
+.bannerDescription {
+  margin-bottom: 0;
+  color: var(--ifm-color-emphasis-700);
+}
+
+[data-theme='dark'] .bannerDescription {
+  color: var(--ifm-color-emphasis-200);
+}
+
+.bannerAction {
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .bannerContent {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .bannerAction {
+    align-self: flex-start;
+  }
+}

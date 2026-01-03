@@ -1,0 +1,124 @@
+/**
+ * CSS files with the .module.css suffix will be treated as CSS modules
+ * and scoped locally.
+ */
+
+.heroBanner {
+  padding: 6rem 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #FAD0C9, #6E6E6D); /* New requested gradient */
+  color: var(--ifm-font-color-base);
+  animation: fadeInUp 1s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+[data-theme='dark'] .heroBanner {
+  background: linear-gradient(135deg, #4F4F4F, #2E2E2E); /* Darker gradient as requested */
+  color: var(--ifm-color-content);
+}
+
+.heroLogo {
+  max-height: 100px;
+  width: auto;
+  margin-bottom: 1.5rem;
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+}
+
+.hero__title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #6E6E6D; /* New requested color */
+  margin-bottom: 1rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme='dark'] .hero__title {
+  color: #FAD0C9; /* New requested color for dark mode */
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero__subtitle {
+  font-size: 1.25rem;
+  opacity: 0.8; /* New requested opacity */
+  color: #4F4F4F; /* New requested color */
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (max-width: 996px) {
+  .heroBanner {
+    padding: 3rem 1rem;
+  }
+}
+
+.heroContent {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+/* Button styling as requested */
+.button--secondary {
+  background: #6E6E6D !important; /* New requested color */
+  color: #FAD0C9 !important; /* New requested color */
+  border-radius: var(--ifm-global-radius) !important;
+  transition: all 0.3s ease-in-out !important;
+}
+
+.button--secondary:hover {
+  color: #FFD1B8 !important; /* New requested hover color */
+  transform: translateY(2px) !important;
+}
+
+[data-theme='dark'] .button--secondary {
+  background: #2E2E2E !important; /* New requested dark mode color */
+  color: #FAD0C9 !important;
+}
+
+[data-theme='dark'] .button--secondary:hover {
+  color: #FFD1B8 !important; /* New requested hover color */
+}
+
+@media screen and (max-width: 576px) {
+  .buttons {
+    flex-direction: column;
+  }
+
+  .button {
+    width: 100%;
+    margin-left: 0 !important;
+  }
+}
+
+.features {
+  padding: 4rem 0;
+}
+
+.featureImage {
+  height: 200px;
+  width: 200px;
+  margin-bottom: 1rem;
+}

@@ -1,0 +1,104 @@
+# API Contract: Physical Book Documentation Services
+
+## Content API
+
+### GET /api/content/modules
+**Description**: Retrieve list of all available modules
+**Parameters**: None
+**Response**:
+```
+{
+  "modules": [
+    {
+      "id": "string",
+      "title": "string",
+      "description": "string",
+      "chapter_count": "number",
+      "order": "number",
+      "sidebar_label": "string"
+    }
+  ]
+}
+```
+
+### GET /api/content/modules/{moduleId}
+**Description**: Retrieve details of a specific module
+**Response**:
+```
+{
+  "id": "string",
+  "title": "string",
+  "description": "string",
+  "chapters": [
+    {
+      "id": "string",
+      "title": "string",
+      "sidebar_label": "string",
+      "order": "number"
+    }
+  ],
+  "order": "number"
+}
+```
+
+### GET /api/content/modules/{moduleId}/chapters/{chapterId}
+**Description**: Retrieve specific chapter content
+**Response**:
+```
+{
+  "id": "string",
+  "title": "string",
+  "sidebar_label": "string",
+  "content": "string",
+  "module_id": "string",
+  "order": "number",
+  "prerequisites": ["string"],
+  "tags": ["string"]
+}
+```
+
+## Search API
+
+### GET /api/search
+**Description**: Search across all documentation content
+**Parameters**:
+- query: string (required) - Search query text
+- limit: number (optional) - Maximum results to return (default: 10)
+- module: string (optional) - Filter by specific module
+
+**Response**:
+```
+{
+  "results": [
+    {
+      "id": "string",
+      "title": "string",
+      "content_preview": "string",
+      "url": "string",
+      "module": "string",
+      "chapter": "string",
+      "relevance_score": "number"
+    }
+  ],
+  "total": "number"
+}
+```
+
+## Navigation API
+
+### GET /api/navigation
+**Description**: Retrieve the complete navigation structure
+**Response**:
+```
+{
+  "navigation": [
+    {
+      "type": "category|doc",
+      "label": "string",
+      "items": ["string"],  // references to other navigation items
+      "link": "string",    // optional
+      "collapsed": "boolean"
+    }
+  ]
+}
+```
