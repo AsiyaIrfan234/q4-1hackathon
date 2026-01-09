@@ -11,7 +11,7 @@ const config = {
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://q4-1hackathon-qhzk.vercel.app/',
+  url: 'https://vercel.com/asiya-irfans-projects/q4-1hackathon-g54u',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub Pages deployment, it is often '/<projectName>/'
   baseUrl: '/q4-1hackathon/',
